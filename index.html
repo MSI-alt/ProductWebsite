@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalNest</title>
+    <style>
+        /* Basic reset */
+        body, h1, h2, p, button {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center; /* Centers the navigation items horizontally */
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex; /* Aligns the menu items in a row */
+        }
+
+        nav ul li {
+            margin: 0 20px; /* Spacing between the menu items */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em; /* Adjust the font size for better visibility */
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content */
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        section {
+            flex: 0 0 70%;
+        }
+
+        aside {
+            flex: 0 0 25%;
+            background-color: #e4e4e4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Product section */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .product-card button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-card button:hover {
+            background-color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>DigitalNest</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section>
+                <h2>Featured Products</h2>
+                <div class="products">
+                    <article class="product-card">
+                        <img src="C:\Users\202411703\Downloads\ebook.jpg" alt="eBook">
+                        <h3>Ultimate Coding Bootcamp</h3>
+                        <p>Learn to code in 30 days with this comprehensive online course.</p>
+                        <p><strong>$49.99</strong></p>
+                        <button onclick="buyNow('Ultimate Coding Bootcamp')">Buy Now</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="C:\Users\202411703\Downloads\photoshop.jpg" alt="Course">
+                        <h3>Master Photoshop Templates</h3>
+                        <p>Unlock your creativity with these easy-to-use Photoshop templates.</p>
+                        <p><strong>$29.99</strong></p>
+                        <button onclick="buyNow('Master Photoshop Templates')">Buy Now</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="C:\Users\202411703\Downloads\template.jpeg" alt="Design Template">
+                        <h3>Modern Website Templates</h3>
+                        <p>Choose from a variety of modern and sleek website templates.</p>
+                        <p><strong>$19.99</strong></p>
+                        <button onclick="buyNow('Modern Website Templates')">Buy Now</button>
+                    </article>
+                </div>
+            </section>
+
+            <aside>
+                <h3>Special Offer</h3>
+                <p>Get 10% off your first purchase with code <strong>DIGITAL10</strong>.</p>
+            </aside>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 DigitalNest. All Rights Reserved.</p>
+            <p>
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">Instagram</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function buyNow(productName) {
+            alert("Thank you for choosing " + productName + " from DigitalNest!\nYour digital download will be available after payment confirmation.");
+        }
+    </script>
+
+</body>
+
+</html>
